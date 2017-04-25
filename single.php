@@ -36,12 +36,12 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<p><?php the_content(); ?></p>
-
+<p><?php the_tags( ); ?></p>
 				<?php comments_template( '', true ); // Remove if you don't want comments ?>
 				<?php  paginate_comments_links();  ?>
 
 				<br class="clear">
-
+                 
 				<?php edit_post_link(); ?>
 
 			</article>

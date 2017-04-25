@@ -30,5 +30,6 @@
     <script src="<?php echo get_template_directory_uri(); ?>/bootstrap/js/bootstrap.min.js"></script>
      <?php wp_footer(); ?>
  <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
+   <?php wp_link_pages(  ); ?>
 
 </body>
