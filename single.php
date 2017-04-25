@@ -1,8 +1,16 @@
 <?php get_header(); ?>
+
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+ <?php  
+    $user_id = get_the_author_meta('ID');
+    
+
+
+?>
 <div class="container-fluid blog-header" style="background : url(<?php the_permalink(); ?>) ;">
         <div class="jumbotron text-center">
-            <h1><?php the_title() ?></h1><img class="img-circle" src="assets/img/avatar_2x.png" width="100">
+            <h1><?php the_title() ?></h1><img class="img-circle" src="<?=  get_avatar_url( $user_id ); ?>" width="100">
             <p> @<?php the_author() ?></p>
         </div>
     </div>
