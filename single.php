@@ -1,0 +1,60 @@
+<?php get_header(); ?>
+	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<div class="container-fluid blog-header" style="background : url(<?php the_permalink(); ?>) ;">
+        <div class="jumbotron text-center">
+            <h1><?php the_title() ?></h1><img class="img-circle" src="assets/img/avatar_2x.png" width="100">
+            <p> @<?php the_author() ?></p>
+        </div>
+    </div>
+	<main role="main" class="container">
+		<!-- section -->
+		<section>
+
+
+
+
+           	<!-- post thumbnail -->
+		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+			<div  class="text-center">
+				<a  href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+				<?php the_post_thumbnail(); // Declare pixel size you need inside the array ?>
+			</a>
+			
+			</div>
+		
+		<?php endif; ?>
+		<!-- /post thumbnail -->
+			<!-- article -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+				<p><?php the_content(); ?></p>
+
+				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+
+				<br class="clear">
+
+				<?php edit_post_link(); ?>
+
+			</article>
+			<!-- /article -->
+
+		<?php endwhile; ?>
+
+		<?php else: ?>
+
+			<!-- article -->
+			<article>
+
+				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+
+			</article>
+			<!-- /article -->
+
+		<?php endif; ?>
+
+		</section>
+		<!-- /section -->
+	</main>
+
+
+<?php get_footer(); ?>
