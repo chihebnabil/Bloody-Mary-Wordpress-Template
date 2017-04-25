@@ -7,7 +7,7 @@
   Description: Simple Colorful Wordpress Blog Template
   License: GNU General Public License v2 or later
   License URI: http://www.gnu.org/licenses/gpl-2.0.html
-  Text Domain: bloodymary
+  Text Domain: bloody-mary
   Tags:   custom-menu, editor-style, featured-images, microformats, post-formats, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
@@ -99,3 +99,34 @@ a.page-numbers {
     text-decoration: none;
     min-width: 25px;
 }
+
+.wp-caption{
+  
+}
+ .wp-caption-text{
+
+ }
+
+ .screen-reader-text{
+   
+ }
+  .sticky{
+
+  }
+ .gallery-caption {
+
+ }
+ .bypostauthor{
+
+ }
+
+ .alignright{
+
+ }
+ .alignleft{
+
+ }
+
+ .aligncenter{
+
+ }

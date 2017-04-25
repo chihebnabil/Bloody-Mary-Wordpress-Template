@@ -1,5 +1,9 @@
 <?php
 
+add_theme_support( "title-tag" );
+add_theme_support( 'automatic-feed-links' );
+
+if ( ! isset( $content_width ) ) $content_width = 900;
 
 
 function bloody_mary_nav()
@@ -42,12 +46,12 @@ function bloody_mary_pagination()
 
 
 // create custom plugin settings menu
-add_action('admin_menu', 'my_cool_plugin_create_menu');
+add_action('admin_menu', 'bloody_mary_plugin_create_menu');
 
-function my_cool_plugin_create_menu() {
+function bloody_mary_plugin_create_menu() {
 
 	//create new top-level menu
-	add_menu_page('Bloody Mary Plugin Settings', 'Settings', 'administrator', __FILE__, 'bloody_mary_settings_page' , plugins_url('/images/icon.png', __FILE__) );
+	add_theme_page('Bloody Mary Plugin Settings', 'Settings', 'administrator', __FILE__, 'bloody_mary_settings_page' , plugins_url('/images/icon.png', __FILE__) );
 
 	//call register settings function
 	add_action( 'admin_init', 'register_bloody_mary_plugin_settings' );

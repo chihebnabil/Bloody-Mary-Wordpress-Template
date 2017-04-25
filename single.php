@@ -38,6 +38,7 @@
 				<p><?php the_content(); ?></p>
 
 				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+				<?php  paginate_comments_links();  ?>
 
 				<br class="clear">
 
@@ -53,7 +54,7 @@
 			<!-- article -->
 			<article>
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+				<h2><?php _e( 'Sorry, nothing to display.', 'bloody-mary' ); ?></h2>
 
 			</article>
 			<!-- /article -->
