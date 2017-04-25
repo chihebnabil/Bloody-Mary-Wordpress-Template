@@ -10,7 +10,7 @@
 ?>
 <div class="container-fluid blog-header" style="background : url(<?php the_permalink(); ?>) ;">
         <div class="jumbotron text-center">
-            <h1><?php the_title() ?></h1><img class="img-circle" src="<?=  get_avatar_url( $user_id ); ?>" width="100">
+            <h1><?php the_title() ?></h1><img class="img-circle" src="<?php echo  get_avatar_url( $user_id ); ?>" width="100">
             <p> @<?php the_author() ?></p>
         </div>
     </div>
