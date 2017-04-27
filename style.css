@@ -3,7 +3,7 @@
 	Theme URI  : https://github.com/chihebnabil/Bloody-Mary-Wordpress-Template
   Author URI : http://github.cpm/chihebnabil
 	Author: Chiheb Nabil (@NabilChiheb)
-  Version: 1.0
+  Version: 1.1
   Description: Simple Colorful Wordpress Blog Template
   License: GNU General Public License v2 or later
   License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,17 +15,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 
-i.fa.fa-heart{
-  color:rgb(241,93,93);
-}
-
-i.fa.fa-android{
-  color:rgb(114,227,114);
-}
-
-i.fa.fa-cloud{
-  color:rgb(128,175,208);
-}
 
 .features .fa{
   font-size:100px;
