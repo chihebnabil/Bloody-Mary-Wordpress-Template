@@ -14,16 +14,24 @@
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <h3>Social Network</h3>
                         <p><?php echo esc_attr( get_theme_mod('footer_box_3') ); ?></p>
+                        <?php if( get_theme_mod('facebook_url') !== "http://" ) { ?>
                         <a href="<?php echo esc_attr( get_theme_mod('facebook_url') ); ?>" target="_blank">
                         <i class="fa fa-facebook"></i>
                         </a>
+                      
+                       <?php }  if(get_theme_mod('twitter_url') !== "http://") { ?>
                         <a href="<?php echo esc_attr( get_theme_mod('twitter_url') ); ?>" target="_blank">
                         <i class="fa fa-twitter"></i>
                         </a>
-                        
+                         <?php }  if(get_theme_mod('github_url') !== "http://") { ?>
                         <a href="<?php echo esc_attr( get_theme_mod('github_url') ); ?>" target="_blank">
                         <i class="fa fa-github"></i>
                         </a>
+                         <?php }  if(get_theme_mod('linkedin_url') !== "http://") { ?>
+                        <a href="<?php echo esc_attr( get_theme_mod('linkedin_url') ); ?>" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                        </a>
+                         <?php } ?>
                 </div>
             </div>
         </div>

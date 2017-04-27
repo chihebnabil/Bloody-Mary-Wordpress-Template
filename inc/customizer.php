@@ -86,6 +86,10 @@ $wp_customize->add_control( 'myplugin_options[color]', array(
 		'default'           => 'http://',
 	
 	) );
+     $wp_customize->add_setting( 'linkedin_url', array(
+		'default'           => 'http://',
+	
+	) );
     $wp_customize->add_setting( 'twitter_url', array(
 		'default'           => 'http://',
 	
@@ -107,6 +111,13 @@ $wp_customize->add_control( 'myplugin_options[color]', array(
 		'type'    => 'text',
 
 	) );
+    $wp_customize->add_control( 'linkedin_url', array(
+		'label'   => __( 'Linkedin', 'bloody_mary' ),
+		'section' => 'social_network',
+		'type'    => 'text',
+
+	) );
+
     $wp_customize->add_control( 'twitter_url', array(
 		'label'   => __( 'Twitter', 'bloody_mary' ),
 		'section' => 'social_network',
