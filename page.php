@@ -47,7 +47,7 @@
 			<!-- article -->
 			<article>
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'bloody_mary' ); ?></h2>
+				<h2><?php _e( 'Sorry, nothing to display.', 'bloody-mary' ); ?></h2>
 
 			</article>
 			<!-- /article -->
