@@ -119,19 +119,19 @@ function bloody_mary_customize_register( $wp_customize ) {
 	) );	
     
     $wp_customize->add_control( 'featured_box_1', array(
-		'label'   => __( 'Layout', 'bloody_mary' ),
+		'label'   => __( 'Featured Box 1', 'bloody_mary' ),
 		'section' => 'featured_content',
 		'type'    => 'text',
 
 	) );
     $wp_customize->add_control( 'featured_box_2', array(
-		'label'   => __( 'Layout', 'bloody_mary' ),
+		'label'   => __( 'Featured Box 2', 'bloody_mary' ),
 		'section' => 'featured_content',
 		'type'    => 'text',
 
 	) );
     $wp_customize->add_control( 'featured_box_3', array(
-		'label'   => __( 'Layout', 'bloody_mary' ),
+		'label'   => __( 'Featured Box 3', 'bloody_mary' ),
 		'section' => 'featured_content',
 		'type'    => 'text',
 
@@ -139,19 +139,19 @@ function bloody_mary_customize_register( $wp_customize ) {
 
 
        $wp_customize->add_control( 'footer_box_1', array(
-		'label'   => __( 'Layout', 'bloody_mary' ),
+		'label'   => __( 'Footer Box 1', 'bloody_mary' ),
 		'section' => 'footer_content',
 		'type'    => 'text',
 
 	) );
     $wp_customize->add_control( 'footer_box_2', array(
-		'label'   => __( 'Layout', 'bloody_mary' ),
+		'label'   => __( 'Footer Box 2', 'bloody_mary' ),
 		'section' => 'footer_content',
 		'type'    => 'text',
 
 	) );
     $wp_customize->add_control( 'footer_box_3', array(
-		'label'   => __( 'Layout', 'bloody_mary' ),
+		'label'   => __( 'Footer Box 3', 'bloody_mary' ),
 		'section' => 'footer_content',
 		'type'    => 'text',
 
