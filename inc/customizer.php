@@ -5,25 +5,6 @@
 
 function bloody_mary_customize_register( $wp_customize ) {
    //All our sections, settings, and controls will be added here
-$wp_customize->add_setting( 'myplugin_options[color]', array(
-  'type' => 'option',
-  'capability' => 'manage_options',
-  'default' => '#ff2525',
-  'sanitize_callback' => 'sanitize_hex_color',
-) );
-$wp_customize->add_control( 'myplugin_options[color]', array(
-  'type' => 'text',
-  'priority' => 10, // Within the section.
-  'section' => 'colors', // Required, core or custom.
-  'label' => __( 'Twitter URL' ),
-  'description' => __( 'This is a date control with a red border.' ),
-  'input_attrs' => array(
-    'class' => 'my-custom-class-for-js',
-    'style' => 'border: 1px solid #900',
-    'placeholder' => __( 'http://' ),
-  ),
-  'active_callback' => 'is_front_page',
-) );
 
 
  // Add the featured content section in case it's not already there.
@@ -42,6 +23,14 @@ $wp_customize->add_control( 'myplugin_options[color]', array(
 		'active_callback' => 'is_front_page',
 	) );
 
+	   // Add the header section.
+	$wp_customize->add_section( 'header', array(
+		'title'           => __( 'Header', 'bloody_mary' ),
+		'description'     =>  __( 'Header', 'bloody_mary' ),
+		'priority'        => 130,
+		'active_callback' => 'is_front_page',
+	) );
+
 
 
      // Add the footer content section.
@@ -55,8 +44,7 @@ $wp_customize->add_control( 'myplugin_options[color]', array(
     // Add the featured content layout setting and control.
     $wp_customize->add_setting( 'featured_box_1', array(
 		'default'           => 'lorem ipsum 1',
-	
-	) );
+		));
     $wp_customize->add_setting( 'featured_box_2', array(
 		'default'           => 'lorem ipsum 3',
 	
@@ -98,7 +86,12 @@ $wp_customize->add_control( 'myplugin_options[color]', array(
 		'default'           => 'http://',
 	) );
 
-
+    $wp_customize->add_setting( 'header_title', array(
+		'default'           => 'lorem ipsum 1',
+		));
+		$wp_customize->add_setting( 'header_subtitle', array(
+		'default'           => 'lorem ipsum 1',
+		));
     $wp_customize->add_control( 'github_url', array(
 		'label'   => __( 'Github', 'bloody_mary' ),
 		'section' => 'social_network',
@@ -126,19 +119,19 @@ $wp_customize->add_control( 'myplugin_options[color]', array(
 	) );	
     
     $wp_customize->add_control( 'featured_box_1', array(
-		'label'   => __( 'Layout', 'twentyfourteen' ),
+		'label'   => __( 'Layout', 'bloody_mary' ),
 		'section' => 'featured_content',
 		'type'    => 'text',
 
 	) );
     $wp_customize->add_control( 'featured_box_2', array(
-		'label'   => __( 'Layout', 'twentyfourteen' ),
+		'label'   => __( 'Layout', 'bloody_mary' ),
 		'section' => 'featured_content',
 		'type'    => 'text',
 
 	) );
     $wp_customize->add_control( 'featured_box_3', array(
-		'label'   => __( 'Layout', 'twentyfourteen' ),
+		'label'   => __( 'Layout', 'bloody_mary' ),
 		'section' => 'featured_content',
 		'type'    => 'text',
 
@@ -146,20 +139,33 @@ $wp_customize->add_control( 'myplugin_options[color]', array(
 
 
        $wp_customize->add_control( 'footer_box_1', array(
-		'label'   => __( 'Layout', 'twentyfourteen' ),
+		'label'   => __( 'Layout', 'bloody_mary' ),
 		'section' => 'footer_content',
 		'type'    => 'text',
 
 	) );
     $wp_customize->add_control( 'footer_box_2', array(
-		'label'   => __( 'Layout', 'twentyfourteen' ),
+		'label'   => __( 'Layout', 'bloody_mary' ),
 		'section' => 'footer_content',
 		'type'    => 'text',
 
 	) );
     $wp_customize->add_control( 'footer_box_3', array(
-		'label'   => __( 'Layout', 'twentyfourteen' ),
+		'label'   => __( 'Layout', 'bloody_mary' ),
 		'section' => 'footer_content',
+		'type'    => 'text',
+
+	) );
+
+	  $wp_customize->add_control( 'header_title', array(
+		'label'   => __( 'Title', 'bloody_mary' ),
+		'section' => 'header',
+		'type'    => 'text',
+
+	) );
+	  $wp_customize->add_control( 'header_subtitle', array(
+		'label'   => __( 'Subtitle', 'bloody_mary' ),
+		'section' => 'header',
 		'type'    => 'text',
 
 	) );

@@ -2,8 +2,8 @@
 <?php if(is_front_page()) {  ?>
 <div class="container-fluid blog-header">
         <div class="jumbotron text-center">
-            <h1> <?php bloginfo('name'); ?> </h1>
-            <p><?php bloginfo('description'); ?></p>
+            <h1> <?php echo esc_attr( get_theme_mod('header_title') ); ?> </h1>
+            <p><?php echo esc_attr( get_theme_mod('header_subtitle') ); ?></p>
         </div>
     </div>
 
