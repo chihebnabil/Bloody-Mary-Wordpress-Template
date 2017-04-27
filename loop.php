@@ -16,7 +16,7 @@
 		</p>
 		<!-- post details -->
 		<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-		<span class="author"><?php _e( 'Published by', 'bloody-mary' ); ?> <?php the_author_posts_link(); ?></span>
+		<span class="author"><?php _e( 'Published by', 'bloody_mary' ); ?> <?php the_author_posts_link(); ?></span>
 		<!-- /post details -->
         <p class="text-right"><a class="btn btn-primary" role="button" href="<?php the_permalink(); ?>" >Read </a></p>
 
@@ -32,7 +32,7 @@
 
 	<!-- article -->
 	<article>
-		<h2><?php _e( 'Sorry, nothing to display.', 'bloody-mary' ); ?></h2>
+		<h2><?php _e( 'Sorry, nothing to display.', 'bloody_mary' ); ?></h2>
 	</article>
 	<!-- /article -->
 
