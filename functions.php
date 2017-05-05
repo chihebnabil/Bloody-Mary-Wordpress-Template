@@ -7,6 +7,7 @@ add_theme_support( "post-thumbnails" );
 if ( ! isset( $content_width ) ) $content_width = 900;
 
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/widgets.php';
 
 function bloody_mary_nav()
 {

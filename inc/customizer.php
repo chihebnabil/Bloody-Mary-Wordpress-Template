@@ -44,16 +44,16 @@ function bloody_mary_customize_register( $wp_customize ) {
     // Add the featured content layout setting and control.
     $wp_customize->add_setting( 'featured_box_1', array(
 		'default'           => 'lorem ipsum 1',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' => 'sanitize_textbox' 
 		));
     $wp_customize->add_setting( 'featured_box_2', array(
 		'default'           => 'lorem ipsum 3',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' => 'sanitize_textbox'
 	
 	) );
     $wp_customize->add_setting( 'featured_box_3', array(
 		'default'           => 'lorem ipsum 3',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' => 'sanitize_textbox'
 		
 	) );
 
@@ -61,48 +61,48 @@ function bloody_mary_customize_register( $wp_customize ) {
      // Add the footer content setting and control.
     $wp_customize->add_setting( 'footer_box_1', array(
 		'default'           => 'lorem ipsum 1',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' => 'sanitize_textbox'
 	
 	) );
     $wp_customize->add_setting( 'footer_box_2', array(
 		'default'           => 'lorem ipsum 2',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' => 'sanitize_textbox'
 	
 	) );
     $wp_customize->add_setting( 'footer_box_3', array(
 		'default'           => 'lorem ipsum 3',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' =>'sanitize_textbox'
 		
 	) );
 
 
     $wp_customize->add_setting( 'facebook_url', array(
 		'default'           => 'http://',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' => 'sanitize_textbox'
 	
 	) );
      $wp_customize->add_setting( 'linkedin_url', array(
 		'default'           => 'http://',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' => 'sanitize_textbox'
 	
 	) );
     $wp_customize->add_setting( 'twitter_url', array(
 		'default'           => 'http://',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' => 'sanitize_textbox'
 	
 	) );
     $wp_customize->add_setting( 'github_url', array(
 		'default'           => 'http://',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' => 'sanitize_textbox'
 	) );
 
     $wp_customize->add_setting( 'header_title', array(
 		'default'           => 'lorem ipsum 1',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' => 'sanitize_textbox'
 		));
 		$wp_customize->add_setting( 'header_subtitle', array(
 		'default'           => 'lorem ipsum 1',
-		'sanitize_callback' => array( $this, 'sanitize_textbox' )
+		'sanitize_callback' => 'sanitize_textbox'
 		));
     $wp_customize->add_control( 'github_url', array(
 		'label'   => __( 'Github', 'bloody-mary' ),
